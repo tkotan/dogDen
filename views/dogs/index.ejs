@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="icon" href="/css/Animals-Dog-Bone-icon.png">
+    <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/dogs/new">Join the Pack!</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>The Dog Den Roster</h1>
+      <section id="dog-roster">
+        <%for(let i=0; i < dogs.length; i++){%>
+            <a href="/dogs/<%= dogs[i].id %>">
+            <img src= "<%=dogs[i].picture%>">
+            <li><%=dogs[i].name%></li>
+        <%}%>
+      </section>
+      </ul>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="icon" href="/css/Animals-Dog-Bone-icon.png">
+    <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/dogs">The Roster</a>
+        </li>
+      </ul>
+    </nav>
+    <h1>Edit <%=onedog.name%>'s Profile</h1>
+    <form action="/dogs/<%=onedog.id%>?_method=PUT" method="POST">
+      <label for="name">What's your dog's name?</label>
+      <input type="text" name="name" value="<%=onedog.name%>"><br>
+      <label for="breed">Breed</label>
+      <input type="text" name="breed" value="<%=onedog.breed%>"><br>
+      <label for="gender">Gender</label>
+      <input type="text" name="gender" value="<%=onedog.gender%>"><br>
+      <label for="age">How old is your dog?</label>
+      <input type="number" name="age" value="<%=onedog.age%>"><br>
+      <label for="shots">Shots up to date?</label>
+      <input type="checkbox" name="shots" value=""><br>
+      <label for="name">Allergies?</label>
+      <input type="text" name="allergies" value="<%=onedog.allergies%>"><br>
+      <label for="picture">Paste a link to your pup's picture here!</label>
+      <input type="text" name="picture" placeholder="picture address" value="<%=onedog.picture%>'s photo goes here"><br>
+      <input type="submit" value="Update <%=onedog.name%>'s Profile">
+    </form>
+  </header>
+
+
+  </body>
+</html>

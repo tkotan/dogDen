@@ -1,13 +1,30 @@
+//require the packages you will use
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+
+//body parser to scan the forms
 const bodyParser = require('body-parser');
-const methodOverride = require('method-override')
-// const session = require('express-session');
+app.use(bodyParser.urlencoded({extended:false}));
+
+//method override for put, post and delete
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
+//connecting dogs controller file
+const dogsController = require('./controllers/dogs.js');
+app.use('/dogs', dogsController);
+
+//linking css
+app.use(express.static('public'));
 
 
-app.get('/new', (req, res)=>{
-  res.send('hi');
+
+
+
+//setting up home page
+app.get('/', (req, res)=>{
+  res.render('index.ejs');
 });
 
 
