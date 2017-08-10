@@ -4,9 +4,9 @@ const dogSchema = mongoose.Schema({
     breed:String,
     gender:String,
     age:Number,
-    favoriteactivities:String,
     shots:Boolean,
     allergies:String,
+    favoriteactivities:String,
     picture:String
 });
 

@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="icon" href="/css/Animals-Dog-Bone-icon.png">
-    <link rel="stylesheet" href="/css/app.css">
+    <% include ../partials/head.ejs %>
   </head>
   <body>
     <header>
@@ -26,9 +23,15 @@
             <a href="/dogs/<%= dogs[i].id %>">
             <img src= "<%=dogs[i].picture%>">
             <li><%=dogs[i].name%></li>
-        <%}%>
+        <%}%><br>
       </section>
       </ul>
     </main>
+    <footer id="footer">
+      <p>The Dog Den, 123 Alphabet Lane, Ringgold, GA 30728</p>
+      <p>555.123.4567</p>
+      <p>A Kotan Kreation</p>
+      <p>All Rights Reserved</p>
+    </footer>
   </body>
 </html>

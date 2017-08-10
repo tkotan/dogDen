@@ -15,6 +15,10 @@ app.use(methodOverride('_method'));
 const dogsController = require('./controllers/dogs.js');
 app.use('/dogs', dogsController);
 
+//connecting messages controller file
+const messagesController = require('./controllers/messages.js');
+app.use('/messages', messagesController);
+
 //linking css
 app.use(express.static('public'));
 

@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="icon" href="/css/Animals-Dog-Bone-icon.png">
-    <link rel="stylesheet" href="/css/app.css">
+    <% include ../partials/head.ejs %>
   </head>
   <body>
     <nav>
@@ -32,7 +29,7 @@
       <label for="name">Allergies?</label>
       <input type="text" name="allergies" value="<%=onedog.allergies%>"><br>
       <label for="favoriteactivities">What does your dog love to do?</label>
-      <input type="text" name="favoriteactivities"><br>
+      <input type="text" name="favoriteactivities" value="<%=onedog.favoriteactivities%>"><br>
       <label for="picture">Paste a link to your pup's picture here!</label>
       <input type="text" name="picture" placeholder="picture address" value="<%=onedog.picture%>'s photo goes here"><br>
       <input type="submit" value="Update <%=onedog.name%>'s Profile">
