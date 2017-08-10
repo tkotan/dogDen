@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Dog = require('../models/dogs.js');
+const Message = require('../models/messages.js');
+
 
 router.get('/', (req,res)=>{
   Dog.find({}, (err, dogRoster) => {

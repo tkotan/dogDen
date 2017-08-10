@@ -27,14 +27,23 @@
         <p><%=onedog.name%>'s favorite activities: <%=onedog.favoriteactivities%></p>
       </section>
       <section>
-        <a href="/dogs/<%=onedog.id%>/edit">Edit <%=onedog.name%>'s Profile</a>
-      </section>
-      <section>
-        <form action="/dogs/<%=onedog.id%>?_method=DELETE" method="POST">
-          <input type="submit" value="Delete <%=onedog.name%>'s Profile">
 
+        <%# edit button%>
+        <form action="/dogs/<%=onedog.id%>/edit">
+          <input type="submit" value="Edit <%=onedog.name%>'s Profile">
         </form>
-    </main>
 
+        <%# message button%>
+
+        <form action="/messages/new">
+          <input type="submit" value="Leave a message for <%=onedog.name%>">
+        </form>
+        <%# delete button%>
+
+        <form action="/dogs/<%=onedog.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete <%=onedog.name%>'s Profile">
+        </form>
+      </section>
+    </main>
   </body>
 </html>

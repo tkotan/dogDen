@@ -1,3 +1,8 @@
-body {
+body{
+  background-color: aqua;
+  font-family: 'Frijole', cursive;
+}
+
+#front-page {
   background: crimson;
 }
