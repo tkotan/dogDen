@@ -3,8 +3,9 @@
   <head>
     <% include ../partials/head.ejs %>
   </head>
-  <body>
+  <body class="show">
     <header>
+      <h1>THE DOG DEN</h1>
       <nav>
         <ul>
           <li>
@@ -15,10 +16,11 @@
           </li>
         </ul>
       </nav>
-      <h1><%=onedog.name%>'s Page</h1>
+
     </header>
     <main>
-      <section>
+      <section class="content">
+        <h1><%=onedog.name%>'s Page</h1>
         <img src="<%=onedog.picture%>" alt="<%=onedog.name%>'s photo goes here">
         <h2>Stats</h2>
         <p>Name: <%=onedog.name%></p>
@@ -29,21 +31,24 @@
       <section>
 
         <%# edit button%>
-        <form action="/dogs/<%=onedog.id%>/edit">
+        <form class="button" action="/dogs/<%=onedog.id%>/edit">
           <input type="submit" value="Edit <%=onedog.name%>'s Profile">
         </form>
 
         <%# message button%>
 
-        <form action="/messages/new">
+        <form
+        class="button" action="/messages/new">
           <input type="submit" value="Leave a message for <%=onedog.name%>">
         </form>
         <%# delete button%>
 
-        <form action="/dogs/<%=onedog.id%>?_method=DELETE" method="POST">
+        <form
+        class="button" action="/dogs/<%=onedog.id%>?_method=DELETE" method="POST">
         <input type="submit" value="Delete <%=onedog.name%>'s Profile">
         </form>
       </section>
     </main>
+
   </body>
 </html>

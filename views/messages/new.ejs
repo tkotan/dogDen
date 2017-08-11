@@ -3,9 +3,9 @@
   <head>
     <% include ../partials/head.ejs %>
   </head>
-  <body>
+  <body class="new">
     <header>
-    <h1>Leave a message, and we'll pass it on!</h1>
+    <h1>THE DOG DEN</h1>
     <nav>
       <ul>
         <li>
@@ -18,11 +18,13 @@
     </nav>
   </header>
   <main>
+  <h1>Leave a message, and we'll pass it on!</h1>
     <form action="/messages" method="post">
-      <input type="text" name="title" /><br/>
-      <textarea name="body"></textarea><br/>
+      <input type="text" name="title" placeholder="Dog's name" /><br/>
+      <textarea name="body"placeholder="Type your message here!"></textarea><br/>
       <input type="submit" value="Post It!"/>
     </form>
   </main>
+
   </body>
 </html>

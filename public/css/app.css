@@ -1,8 +1,116 @@
 body{
-  background-color: aqua;
   font-family: 'Frijole', cursive;
+
+  margin-left: 1em;
 }
 
 #front-page {
-  background: crimson;
+  padding-top: 3em;
+  background: #ffcc33;
+  text-align: center;
+}
+
+
+
+.title {
+  font-size: 4em;
+  color: black;
+}
+
+#dog-roster {
+  text-align: center;
+}
+
+li{
+  list-style-type: none;
+}
+
+#dog-roll{
+  padding: 3em;
+}
+
+img {
+  border-radius:12px;
+}
+
+#dog-list {
+  padding: .25em 0 1.5em;
+}
+
+#dog-roll>img{
+  border-radius: 10px;
+}
+
+a{
+  color:#2A52BE;
+}
+
+a:hover{
+  color:#A2006D;
+}
+
+.content{
+  text-align: center;
+}
+
+.button{
+  padding-top: 2em;
+  text-align: center;
+}
+
+
+.form{
+  margin-left: 6em;
+}
+
+.edit{
+  background-color: #d896ff;
+}
+
+.index{
+  background-color: #66bd63;
+}
+
+.new{
+  background-color: #00e5e5;
+}
+
+.show{
+  background-color: #e65a76;
+}
+
+footer {
+  font-family:Arial;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color:
+
+}
+#left{
+  float: left;
+}
+
+#right{
+  float:right;
+}
+
+header {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  text-align: center;
+  color: black;
+}
+
+/*header ul li{
+  color: black;
+};*/
+
+main{
+  padding-top: 10em;
 }

@@ -3,7 +3,9 @@
   <head>
     <% include ../partials/head.ejs %>
   </head>
-  <body>
+  <body class="edit">
+    <header>
+    <h1>THE DOG DEN</h1>
     <nav>
       <ul>
         <li>
@@ -14,27 +16,48 @@
         </li>
       </ul>
     </nav>
-    <h1>Edit <%=onedog.name%>'s Profile</h1>
-    <form action="/dogs/<%=onedog.id%>?_method=PUT" method="POST">
-      <label for="name">What's your dog's name?</label>
-      <input type="text" name="name" value="<%=onedog.name%>"><br>
-      <label for="breed">Breed</label>
-      <input type="text" name="breed" value="<%=onedog.breed%>"><br>
-      <label for="gender">Gender</label>
-      <input type="text" name="gender" value="<%=onedog.gender%>"><br>
-      <label for="age">How old is your dog?</label>
-      <input type="number" name="age" value="<%=onedog.age%>"><br>
-      <label for="shots">Shots up to date?</label>
-      <input type="checkbox" name="shots" value=""><br>
-      <label for="name">Allergies?</label>
-      <input type="text" name="allergies" value="<%=onedog.allergies%>"><br>
-      <label for="favoriteactivities">What does your dog love to do?</label>
-      <input type="text" name="favoriteactivities" value="<%=onedog.favoriteactivities%>"><br>
-      <label for="picture">Paste a link to your pup's picture here!</label>
-      <input type="text" name="picture" placeholder="picture address" value="<%=onedog.picture%>'s photo goes here"><br>
-      <input type="submit" value="Update <%=onedog.name%>'s Profile">
-    </form>
-  </header>
+    </header>
+    <main>
+    <section class="form">
+      <h1>Edit <%=onedog.name%>'s Profile</h1>
+      <form action="/dogs/<%=onedog.id%>?_method=PUT" method="POST">
+        <div class="form-group">
+          <label for="name">What's your dog's name?</label>
+          <input type="text" name="name" value="<%=onedog.name%>"><br>
+        </div>
+        <div class="form-group">
+          <label for="breed">Breed</label>
+          <input type="text" name="breed" value="<%=onedog.breed%>"><br>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <input type="text" name="gender" value="<%=onedog.gender%>"><br>
+        </div>
+        <div class="form-group">
+          <label for="age">How old is your dog?</label>
+          <input type="number" name="age" value="<%=onedog.age%>"><br>
+        </div>
+        <div class="form-group">
+          <label for="shots">Shots up to date?</label>
+          <input type="checkbox" name="shots" value=""><br>
+        </div>
+        <div class="form-group">
+          <label for="name">Allergies?</label>
+          <input type="text" name="allergies" value="<%=onedog.allergies%>"><br>
+        </div>
+        <div class="form-group">
+          <label for="favoriteactivities">What does your dog love to do?</label>
+          <input type="text" name="favoriteactivities" value="<%=onedog.favoriteactivities%>"><br>
+        </div>
+        <div class="form-group">
+          <label for="picture">Paste a link to your pup's picture here!</label>
+          <input type="text" name="picture" placeholder="picture address" value="<%=onedog.picture%>'s photo goes here"><br>
+        </div>
+
+          <input  type="submit" value="Update <%=onedog.name%>'s Profile">
+      </form>
+    </section>
+  </main>
 
 
   </body>

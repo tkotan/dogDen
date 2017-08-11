@@ -3,8 +3,9 @@
   <head>
     <% include ../partials/head.ejs %>
   </head>
-  <body>
+  <body class="new">
     <header>
+      <h1>THE DOG DEN</h1>
       <nav>
         <ul>
           <li>
@@ -15,10 +16,10 @@
           </li>
         </ul>
       </nav>
-      <h1>That's my dog!</h1>
-      <h3>Tell us about your dog...we're all ears!</h3>
     </header>
-    <main>
+    <main class="form">
+      <h1 class="thats-my-dog">That's my dog!</h1>
+      <h3>Tell us about your dog...we're all ears!</h3>
       <form action="/dogs" method="POST">
         <label for="name">What's your dog's name?</label>
         <input type="text" name="name"><br>
@@ -40,5 +41,6 @@
 
       </form>
     </main>
+
   </body>
 </html>

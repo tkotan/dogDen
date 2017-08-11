@@ -3,35 +3,25 @@
   <head>
     <% include ../partials/head.ejs %>
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/dogs/new">Join the Pack!</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <body class="index">
+    <header class="container">
+    <h1>THE DOG DEN</h1>
     <main>
-      <h1>The Dog Den Roster</h1>
+
       <section id="dog-roster">
+        <h1>The Dog Den Roster</h1>
+        <div id="dog-roll">
+
+
         <%for(let i=0; i < dogs.length; i++){%>
             <a href="/dogs/<%= dogs[i].id %>">
             <img src= "<%=dogs[i].picture%>">
-            <li><%=dogs[i].name%></li>
+            <li id="dog-list"><%=dogs[i].name%></li>
         <%}%><br>
+        </div>
       </section>
       </ul>
     </main>
-    <%# <footer id="footer">
-      <p>The Dog Den, 123 Alphabet Lane, Ringgold, GA 30728</p>
-      <p>555.123.4567</p>
-      <p>A Kotan Kreation</p>
-      <p>All Rights Reserved</p>
-    </footer>%>
+
   </body>
 </html>

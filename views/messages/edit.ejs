@@ -3,9 +3,9 @@
   <head>
     <% include ../partials/head.ejs %>
   </head>
-  <body>
+  <body class="edit">
     <header>
-  <h1>Edit <%=message.title%>'s Info</h1>
+      <h1>THE DOG DEN</h1>
   <nav>
     <ul>
       <li>
@@ -17,9 +17,9 @@
     </ul>
   </nav>
 </header>
-<main>
-  <h2>Message Attributes:</h2>
-  <form action="/messages/<%=message._id%>?_method=PUT" method="post">
+<main class="form">
+  <h2>Edit your message:</h2>
+  <form  action="/messages/<%=message._id%>?_method=PUT" method="post">
     <input type="text" name="title" value="<%=message.title%>"/><br/>
     <textarea name="body"><%=message.body%></textarea><br/>
     <input type="submit" value="Update Message"/>
